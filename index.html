@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Utama Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="" class="logo">Logo</a>
+        <ul>
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Competition</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="img/stars.png" id="stars" alt="">
+        <img src="img/moon.png" id="moon" alt="">
+        <img src="img/mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="headline">Event Utama</h2>
+        <h2 id="text">Welcome Champions</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="img/mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>About Us</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis vel tempora veritatis ad. Expedita libero, minima commodi ratione, beatae eius fugiat soluta nihil molestias non nemo illum aliquam eum quae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ad nesciunt sequi assumenda tempora aut officia velit vel eius? Dolor minus nostrum expedita quidem itaque esse veniam debitis similique accusantium?</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quidem officiis minima molestiae rem debitis numquam consectetur ex accusamus modi, beatae at ipsam eligendi nisi reprehenderit maiores vero eaque veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, natus! Eligendi, soluta, dignissimos, ullam aspernatur at ut nam ex quod itaque commodi vel adipisci magnam officiis velit sunt? Modi, doloremque.</p>
+        <br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe corrupti iste culpa assumenda sit, eaque quam impedit vero reiciendis, possimus quia, itaque ullam sapiente quae nihil pariatur distinctio molestias iure. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi pariatur atque, rerum facere aspernatur nobis explicabo similique illo ullam nam mollitia hic ducimus possimus tempora repellat nesciunt magni ipsa modi.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, exercitationem reiciendis fugiat esse quod reprehenderit fugit optio laudantium, perferendis deserunt soluta. Distinctio voluptates nesciunt fugit commodi, atque praesentium labore excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa impedit ad optio sunt earum consequatur laudantium molestiae pariatur ea repudiandae cum laboriosam adipisci quasi quam rerum excepturi, sint consequuntur.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, exercitationem reiciendis fugiat esse quod reprehenderit fugit optio laudantium, perferendis deserunt soluta. Distinctio voluptates nesciunt fugit commodi, atque praesentium labore excepturi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa impedit ad optio sunt earum consequatur laudantium molestiae pariatur ea repudiandae cum laboriosam adipisci quasi quam rerum excepturi, sint consequuntur.</p>
+    </div>
+
+    <script>
+        let moon = document.getElementById('moon')
+        let stars = document.getElementById('stars')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let mountains_front = document.getElementById('mountains_front')
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + "px";
+            moon.style.top = value * 1.05 + "px";
+            mountains_behind.style.top = value * 0.5 + "px";
+            mountains_front.style.top = value * 0 + "px";
+            text.style.marginRight = value * 4 + "px";
+            text.style.marginTop = value * 0.5 + "px";
+            btn.style.marginTop = value * 1.5 + "px";
+        })
+
+    </script>
+</body>
+</html>
